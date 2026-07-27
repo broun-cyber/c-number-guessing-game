@@ -3,15 +3,31 @@
 #include <time.h>
 
 int main() {
-    int secret_number, guess;
+    int secret_number, guess, difficulty, max_number;
     int attempts = 0;
 
     srand(time(NULL));
-
-    secret_number = rand() % 100 + 1;
-
     printf("=== Number Guessing Game ===\n");
-    printf("I have selected a number between 1 and 100.\n");
+    printf("\nSelect Difficulty Level:\n");
+    printf("1. Easy (1-50)\n");
+    printf("2. Medium (1-100)\n");
+    printf("3. Hard (1-500)\n");
+    printf("Enter your choice: ");
+    scanf("%d", &difficulty);
+
+    if (difficulty == 1) {
+        max_number = 50;
+    } else if (difficulty == 2) {
+        max_number = 100;
+    } else if (difficulty == 3) {
+        max_number = 500;
+    } else {
+        printf("Invalid difficulty choice.\n");
+        return 1;
+    }
+    secret_number = rand() % max_number + 1;
+    
+    printf("I have selected a number between 1 and %d.\n", max_number);
     printf("Try to guess it!\n");
 
     do {
