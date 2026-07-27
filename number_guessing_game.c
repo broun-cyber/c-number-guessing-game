@@ -34,6 +34,11 @@ int main() {
         printf("\nEnter your guess: ");
         scanf("%d", &guess);
 
+        if (guess < 1 || guess > max_number) {
+            printf("Invalid guess! Enter a number between 1 and %d.\n", max_number);
+            continue;
+        }
+
         attempts++;
 
         if (guess < secret_number) {
