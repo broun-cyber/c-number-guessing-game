@@ -31,8 +31,6 @@ A beginner-friendly C number guessing game that uses random numbers, loops, and 
 
 ## ⚙️ How It Works
 
-## ⚙️ How It Works
-
 1. The user selects a difficulty level.
 2. Easy uses 1–50 with 10 attempts, Medium uses 1–100 with 8 attempts, and Hard uses 1–500 with 7 attempts.
 3. The program generates a random secret number within the selected range.
