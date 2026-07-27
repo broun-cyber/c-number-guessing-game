@@ -13,6 +13,10 @@ A beginner-friendly C number guessing game that uses random numbers, loops, and 
 - Includes Easy, Medium, and Hard difficulty levels
 - Validates guesses based on the selected difficulty range
 - Invalid out-of-range guesses are not counted as attempts
+- Limits attempts based on the selected difficulty level
+- Shows remaining attempts after an incorrect valid guess
+- Displays a Game Over message when all attempts are used
+- Reveals the correct number after Game Over
 
 ## 🛠️ Technologies Used
 
@@ -27,15 +31,18 @@ A beginner-friendly C number guessing game that uses random numbers, loops, and 
 
 ## ⚙️ How It Works
 
+## ⚙️ How It Works
+
 1. The user selects a difficulty level.
-2. Easy uses a range of 1–50, Medium uses 1–100, and Hard uses 1–500.
+2. Easy uses 1–50 with 10 attempts, Medium uses 1–100 with 8 attempts, and Hard uses 1–500 with 7 attempts.
 3. The program generates a random secret number within the selected range.
-4. The user enters a number as a guess.
-5. The program checks whether the guess is within the selected difficulty range.
-6. Out-of-range guesses display an error message and are not counted as attempts.
-7. Valid guesses receive a "Too low!" or "Too high!" hint when incorrect.
-8. The game continues until the correct number is guessed.
-9. The program displays the total number of valid attempts after a correct guess.
+4. The user enters a guess.
+5. Out-of-range guesses display an error and are not counted as attempts.
+6. Valid incorrect guesses receive a "Too low!" or "Too high!" hint.
+7. The program displays the number of remaining attempts after an incorrect valid guess.
+8. The game ends when the user guesses correctly or uses all available attempts.
+9. If all attempts are used, the program displays Game Over and reveals the correct number.
+10. If the user guesses correctly, the program displays the total attempts used.
 
 ## ▶️ How to Run
 
@@ -49,7 +56,7 @@ Run the program:
 
 Example:
 
-    === Number Guessing Game ===
+       === Number Guessing Game ===
 
     Select Difficulty Level:
     1. Easy (1-50)
@@ -58,6 +65,7 @@ Example:
     Enter your choice: 2
 
     I have selected a number between 1 and 100.
+    You have 8 attempts to guess it.
     Try to guess it!
 
     Enter your guess: 150
@@ -65,9 +73,11 @@ Example:
 
     Enter your guess: 40
     Too low! Try again.
+    Attempts remaining: 7
 
     Enter your guess: 75
     Too high! Try again.
+    Attempts remaining: 6
 
     Enter your guess: 60
 
@@ -91,11 +101,15 @@ Through this project, I practiced:
 - Using variables to control dynamic random number ranges
 - Validating guesses against a selected range
 - Using `continue` to skip invalid guesses without increasing the attempt count
+- Setting attempt limits based on difficulty levels
+- Controlling loops using multiple conditions
+- Tracking and displaying remaining attempts
+- Implementing a Game Over condition
+- Revealing the secret number when the player runs out of attempts
 
 ## 🔮 Future Improvements
 
 - Add input validation for invalid guesses
-- Limit the number of attempts
 - Add a play-again option
 - Display the best score
 - Add a scoring system based on attempts
