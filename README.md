@@ -3,13 +3,14 @@ A beginner-friendly C number guessing game that uses random numbers, loops, and 
 
 ## 🚀 Features
 
-- Generates a random number between 1 and 100
+- Generates a random number based on the selected difficulty level
 - Accepts guesses from the user
 - Provides "Too High" and "Too Low" hints
 - Continues until the correct number is guessed
 - Counts the total number of attempts
 - Uses random number generation
 - Simple command-line interface
+- Includes Easy, Medium, and Hard difficulty levels
 
 ## 🛠️ Technologies Used
 
@@ -24,12 +25,13 @@ A beginner-friendly C number guessing game that uses random numbers, loops, and 
 
 ## ⚙️ How It Works
 
-1. The program generates a random number between 1 and 100.
-2. The user enters a number as a guess.
-3. If the guess is lower than the secret number, the program displays "Too low!".
-4. If the guess is higher than the secret number, the program displays "Too high!".
-5. The program continues asking for guesses until the correct number is entered.
-6. Once guessed correctly, it displays the total number of attempts.
+1. The user selects a difficulty level.
+2. Easy uses a range of 1–50, Medium uses 1–100, and Hard uses 1–500.
+3. The program generates a random secret number within the selected range.
+4. The user enters a number as a guess.
+5. The program displays "Too low!" or "Too high!" based on the guess.
+6. The game continues until the correct number is guessed.
+7. The program displays the total number of attempts after a correct guess.
 
 ## ▶️ How to Run
 
@@ -43,20 +45,27 @@ Run the program:
 
 Example:
 
-    === Number Guessing Game ===
-    I have selected a number between 1 and 100.
-    Try to guess it!
+   === Number Guessing Game ===
 
-    Enter your guess: 40
-    Too low! Try again.
+Select Difficulty Level:
+1. Easy (1-50)
+2. Medium (1-100)
+3. Hard (1-500)
+Enter your choice: 2
 
-    Enter your guess: 75
-    Too high! Try again.
+I have selected a number between 1 and 100.
+Try to guess it!
 
-    Enter your guess: 60
+Enter your guess: 40
+Too low! Try again.
 
-    Correct! You guessed the number.
-    Total attempts: 3
+Enter your guess: 75
+Too high! Try again.
+
+Enter your guess: 60
+
+Correct! You guessed the number.
+Total attempts: 3
 
 ## 🧠 What I Learned
 
@@ -71,11 +80,12 @@ Through this project, I practiced:
 - Using `srand()` and `time()` for random number seeding
 - Counting user attempts
 - Git & GitHub workflow
+- Creating difficulty levels using conditional statements
+- Using variables to control dynamic random number ranges
 
 ## 🔮 Future Improvements
 
 - Add input validation for invalid guesses
-- Add difficulty levels
 - Limit the number of attempts
 - Add a play-again option
 - Display the best score
